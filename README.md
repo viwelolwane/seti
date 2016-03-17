@@ -7,8 +7,8 @@ How to run:
 
     $ git clone https://github.com/rohit01/docker_shinken.git
     $ cd docker_shinken/shinken_thruk_graphite
-    $ sudo docker run -d -v "$(pwd)/custom_configs:/etc/shinken/custom_configs" -p 80:80 rohit01/shinken_thruk_graphite
-
+    $ sudo docker run -d -v "$(pwd)/custom_configs:/home/viwe/seti/custom_configs"-p 80:80 rohit01/shinken_thruk_graphite
+sudo docker run -d -v "$/home/viwe/seti/custom_configs:etc/shinken/custom_configs:" -p 80:80 seti/thruk
 Once done, visit these urls (Default credentials - admin/admin):
 
 * Default WebUI: <http://localhost/>
@@ -23,3 +23,7 @@ Note:
 * If you are using custom NRPE plugins, please mount your plugins directory inside docker container at /usr/local/custom_plugins. You need to define resource paths accordingly.
 
 Docker registry link: <https://registry.hub.docker.com/u/rohit01/shinken_thruk_graphite/>
+
+
+
+sudo docker run -d -v "/home/viwe/seti/custom_configs:/etc/shinken/custom_configs:" -p 80:80 seti/thruk
